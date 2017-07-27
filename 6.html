@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        .container{
+           position: relative
+        }
+        .left{
+          height: 200px;
+          background: #fab;
+          /* margin-right: 50px; */
+          width: 100px;
+          position: absolute;
+          top: 0;
+          left: 0
+        }
+        .right{
+          width: 100px;
+          height: 200px;
+          background: #0ef;
+          position: absolute;
+          top: 0;
+          right: 0;
+          /* margin-left: 50px; */
+        }
+        .main{
+            height: 200px;
+            background: #ffa;
+            margin: 0 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <script>
+            function doQuery(url){
+                $('GET',url,function(data){
+                    var url2 = data.url;
+                    $('GET',url2,function(res){
+                        console.log(res)
+                    })
+                })
+            }
+        </script>
+    </body>
+</html>

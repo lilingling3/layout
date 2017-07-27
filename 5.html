@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        .container{
+           display: flex
+        }
+        .left{
+          order: -1;
+          /*排列顺序 数字越小 越靠前  */
+          height: 200px;
+          background: #fab;
+          flex: 0 1 200px; 
+          margin-right: 50px;
+           /*
+           如果有剩余空间也不进行放大
+           如果空间不足就进行 缩小
+            */
+          /*flex=grow 项目放大比例  */
+          /*flex=shrink 项目缩小比例  */
+          /*flex=basis 项目大小 如果写是固定大小  */
+         
+        }
+        .right{
+          height: 200px;
+          background: #0ef;
+          flex: 0 1 200px;
+          margin-left: 50px;
+        }
+        .main{
+            height: 200px;
+            background: #ffa;
+            flex-grow: 1;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <script>
+            function doQuery(url){
+                $('GET',url,function(data){
+                    var url2 = data.url;
+                    $('GET',url2,function(res){
+                        console.log(res)
+                    })
+                })
+            }
+        </script>
+    </body>
+</html>
