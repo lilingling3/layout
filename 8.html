@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+  <script>
+    function fun(){
+      var a = 0;
+      return function(){
+        a++;
+        return console.log(a);
+      }
+    }
+
+    var b = fun();
+    // b();
+    // b();
+    // b();
+    // 结果是 1,2,3
+    fun()();
+    fun()();
+    fun()();
+    //结果是 1,1,1
+  </script>
+  </body>
+</html>
