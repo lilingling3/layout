@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+     <script>
+       function fun(num){
+          var result = [];
+          var score = Math.floor(num*2)/2;
+          // 得到是整数 或者.5 的数
+          // 如果小数部分大于5 得到的是 .5
+          // 如果小数部分小于5，得到的是整数
+          var hasDecimal = score % 1 !=0; // 表示是有余数，小数部分大于5
+          var integer = Math.floor(score);
+          if(hasDecimal){
+            console.log('余数大于5')
+          }
+       }
+
+       fun(8.6)
+
+
+     </script>
+  </body>
+</html>

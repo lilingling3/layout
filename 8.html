@@ -20,10 +20,16 @@
     // b();
     // b();
     // 结果是 1,2,3
-    fun()();
-    fun()();
-    fun()();
+    // fun()();
+    // fun()();
+    // fun()();
     //结果是 1,1,1
+
+
+    if(!('num' in window)){
+        var num =12 ;  // 变量提前声明
+    }
+    console.log(num); // undefined
   </script>
   </body>
 </html>
